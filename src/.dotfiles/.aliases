@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# commons
+alias svi="sudo vi"
+alias c="clear"
+alias ll="ls -alh"
+alias downloads="cd ~/Downloads"
+alias cdw="cd ~/Sites"
+alias sites="cd ~/Sites"
+alias edithost="sudo vi /etc/hosts"
+alias showdirssize="sudo find . -maxdepth 1 -type d -mindepth 1 -exec du -hs {} \;"
+
+# react native
+alias rn="npx react-native"
+
+# misc
+alias kiss="fuck"
+
+# docker
+alias dock="docker-compose"
+
+# switch hosts config
+#alias prod='sudo cp -af ~/hosts.prod.template /etc/hosts && echo "prod activated"'
+#alias ddev='sudo cp -af ~/hosts.dev.docker.template /etc/hosts && echo "dev docker activated"'
+#alias ldev='sudo cp -af ~/hosts.dev.local.template /etc/hosts && echo "dev local activated"'
+
+# ssh - remote
+alias sshprod="ssh -i '~/KEY.pem' -t ubuntu@xx.xx.xxx.xxx 'cd /var/www/frontend && exec \$SHELL'"

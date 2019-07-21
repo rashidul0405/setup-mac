@@ -1,0 +1,39 @@
+[user]
+	name = Md Rashidul Islam
+	email = rashidul0405@gmail.com
+[alias]
+	s = status
+	d = diff
+	a = add 
+	o = !git-open
+	b = branch
+	m = merge
+	h = history
+	sh = show
+	cm = commit -am 
+	cma = commit --amend --no-edit
+	ch = checkout
+	chm = checkout master
+	ps = push 
+	psc = push -u origin HEAD
+	pscf = push -u origin HEAD --force
+	psm = push origin master
+	psmf = push origin master --force
+	pl = pull --ff-only
+	plm = pull origin master --ff-only
+	fch = fetch
+	fchm = fetch origin master
+	rb = rebase
+	rbm = rebase master
+	fixup = commit --fixup
+	lg = log --graph --pretty=format:'%C(bold red)%h%Creset - %s %C(bold blue)<%an>%Creset %C(dim green)[%cr]%Creset %C(dim yellow)%d%Creset'
+	clean = reset HEAD && !git checkout . && git clean -f -d
+[core]
+	excludesfile = ~/.gitignore
+[help]
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+[push]
+	default = current
+[rebase]
+	autosquash = true
