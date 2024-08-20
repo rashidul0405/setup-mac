@@ -6,11 +6,11 @@ set -e
 # Set global parameters
 DIR="$(dirname "${BASH_SOURCE[0]}")"
 while getopts "v" arg; do
-  case $arg in
+    case $arg in
     v)
-      VERBOSE=true
-      ;;
-  esac
+        VERBOSE=true
+        ;;
+    esac
 done
 
 # Include scripts
@@ -48,14 +48,6 @@ if [ -e $cwd/packages/brews ]; then
     chapter "Installing Homebrew formulae..."
     for brew in $(<$cwd/packages/brews); do
         install_brew $brew
-    done
-fi
-
-#  Install yarn packages
-if [ -e $cwd/packages/yarn ]; then
-    chapter "Installing yarn packages..."
-    for pkg in $(<$cwd/packages/yarn); do
-        install_yarn_package $pkg
     done
 fi
 
